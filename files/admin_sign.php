@@ -11,16 +11,11 @@
         <h1 class="for-white-color" id="headline">We Hear You Loud and Clear<br>Your Voice, Our Priority</h1>
        <div id="cred-img-area">
             <div id="cred-area">
-                <h3 class="for-white-color" id="sign-up-text">Sign Up</h3>
+                <h3 class="for-white-color" id="sign-up-text">Admin</h3>
                 <input class="sign-up-inputs" id="sign-up-name" type="text" name="username" placeholder="Name" required>
-                <input class="sign-up-inputs" id="sign-up-email" type="email" name="email" placeholder="Email" required>
                 <input class="sign-up-inputs" id="sign-up-password" type="password" name="password" placeholder="Password" required>
-                <input class="sign-up-inputs" id="confirm-password" type="password" name="confirm-password" placeholder="Confirm password" required>
-                <button class="form-buttons" type="submit" id="sign-up-button">Sign Up</button>
-                <p class="for-white-color" id="ptext">Already have an account? <a href="sign_in.html" class="for-white-color">Sign In</a></p>
-            </div>
-            <div id="cred-img">
-                <img id="img-poster" src="/img/poster.jpg" alt="poster">
+                <button class="form-buttons" type="submit" id="sign-up-button">Sign In</button>
+                <p class="for-white-color" id="ptext">Register as <a href="sign_in.php" class="for-white-color">Admin</a></p>
             </div>
        </div>
     </form>

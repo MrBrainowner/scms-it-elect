@@ -71,6 +71,7 @@ body{
     border-color: #fff;
 }
 #cred-img{
+    position: relative;
     height: 100%;
     width: 50%;
     overflow: hidden;
@@ -88,4 +89,32 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#admin{
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+.admn{
+    position: absolute;
+    background-color: #151d2f;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px;
+    margin: 0px;
+    opacity: 30%;
+}
+.admn:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+form div #cred-area .error-msg{
+    margin: 10px 0;
+    display: block;
+    background-color: #FF4D4D;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
 }

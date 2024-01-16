@@ -15,10 +15,11 @@
                 <input class="sign-up-inputs" id="sign-in-name" type="text" name="username" placeholder="Name" required>
                 <input class="sign-up-inputs" id="sign-in-email" type="email" name="email" placeholder="Email" required>
                 <input class="sign-up-inputs" id="sign-in-password" type="password" name="password" placeholder="Password" required>
-                <button class="form-buttons" type="submit" id="sign-in-button">Sign Up</button>
-                <p class="for-white-color" id="ptext">Dont have an account? <a href="sign_up.html" class="for-white-color">Sign Up</a></p>
+                <button class="form-buttons" type="submit" id="sign-in-button">Sign In</button>
+                <p class="for-white-color" id="ptext">Dont have an account? <a href="sign_up.php" class="for-white-color">Sign In</a></p>
             </div>
             <div id="cred-img">
+                <a href="admin_sign.php"><div class="admn"><p id="admin">admin</p></div></a>
                 <img id="img-poster" src="/img/poster.jpg" alt="poster">
             </div>
        </div>
