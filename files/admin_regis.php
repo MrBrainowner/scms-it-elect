@@ -6,13 +6,13 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-    $usename = mysqli_real_escape_string($conn, $_POST['username']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = md5($_POST['password']);
-    $cpassword = md5($_POST['cpassword']);
-    $user_type = $_POST['cpassword'];
+    $ausename = mysqli_real_escape_string($conn, $_POST['username']);
+    $aemail = mysqli_real_escape_string($conn, $_POST['email']);
+    $apassword = md5($_POST['password']);
+    $acpassword = md5($_POST['cpassword']);
+    $auser_type = $_POST['cpassword'];
     
-    $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$password' ";
+    $select = " SELECT * FROM user_admin WHERE email = '$aemail' && password = '$apassword' ";
 
     $result = mysqli_query($conn, $select);
 
@@ -22,12 +22,12 @@ if(isset($_POST['submit'])){
 
     } else {
 
-        if($password != $cpassword){
+        if($apassword != $acpassword){
             $error[] = 'password do not matched!';
         } else {
-            $insert = "INSERT INTO user_form(name, email, password, user_type) VALUES('$usename', '$email', '$password', '$user_type')";
+            $insert = "INSERT INTO user_admin(name, email, password, admin_type) VALUES('$ausename', '$aemail', '$apassword', '$auser_type')";
             mysqli_query($conn, $insert);
-            header('location:sign_in.php');
+            header('location:admin_page.php');
         }
     }
 };
@@ -39,6 +39,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
     <title>Document</title>
 </head>
 <body>
@@ -46,7 +47,7 @@ if(isset($_POST['submit'])){
         <h1 class="for-white-color" id="headline">We Hear You Loud and Clear<br>Your Voice, Our Priority</h1>
        <div id="cred-img-area">
             <div id="cred-area">
-                <h3 class="for-white-color" id="sign-up-text">Sign Up</h3>
+                <h3 class="for-white-color" id="sign-up-text">Admin</h3>
                 <?php
                 if(isset($error)){
                     foreach($error as $error){
@@ -60,11 +61,8 @@ if(isset($_POST['submit'])){
                 <input class="sign-up-inputs" id="confirm-password" type="password" name="cpassword" placeholder="Confirm password" required>
                 <input type="submit" name="submit" value="Sign Up" class="form-buttons" id="sign-up-button" >
                 <!-- <input class="form-buttons" type="submit" id="sign-up-button"> -->
-                <p class="for-white-color" id="ptext">Already have an account? <a href="sign_in.php" class="for-white-color">Sign In</a></p>
-            </div>
-            <div id="cred-img">
-               <a href="admin_sign.php"><div class="admn"><p id="admin">admin</p></div></a>
-                <img id="img-poster" src="../img/poster.jpg" alt="poster">
+                <p class="for-white-color" id="ptext">Already have an account? <a href="admin_sign.php" class="for-white-color">Sign In</a></p>
+                <div id="u-link-div"><a id="u-link" href="sign_up.php">user</a></div>
             </div>
        </div>
     </form>

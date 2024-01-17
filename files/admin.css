@@ -1,0 +1,17 @@
+#u-link{
+    border-radius: 5px;
+    margin: 0px;
+    padding: 1px 6px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #141c2f;
+    opacity: 20%;
+}
+#u-link:hover{
+    opacity: 100%;
+}
+#u-link-div{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
