@@ -6,11 +6,8 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-    $ausename = mysqli_real_escape_string($conn, $_POST['username']);
     $aemail = mysqli_real_escape_string($conn, $_POST['email']);
     $apassword = md5($_POST['password']);
-    $acpassword = md5($_POST['cpassword']);
-    $auser_type = $_POST['cpassword'];
     
     $select = " SELECT * FROM user_admin WHERE email = '$aemail' && password = '$apassword' ";
 
@@ -20,7 +17,7 @@ if(isset($_POST['submit'])){
         
         $row = mysqli_fetch_array($result);
 
-      if ($row['admin_type'] == 'admin'){
+      if ($row['password'] == $apassword){
 
         $_SESSION['admin_name'] = $row['name'];  
         header('location:admin_page.php');

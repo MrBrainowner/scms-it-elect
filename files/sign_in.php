@@ -18,9 +18,9 @@ if(isset($_POST['submit'])){
 
         $row = mysqli_fetch_array($result);
 
-      if ($row['email'] == $_POST['email']){
+      if ($row['password'] == $password){
 
-        $_SESSION['username'] = $row['name'];  
+        $_SESSION['user_name'] = $row['name'];  
         header('location:user_page.php');
 
       } 
