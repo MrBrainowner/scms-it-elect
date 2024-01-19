@@ -6,11 +6,9 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-    $usename = mysqli_real_escape_string($conn, $_POST['username']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = md5($_POST['password']);
-    $cpassword = md5($_POST['cpassword']);
-    $user_type = $_POST['cpassword'];
+
     
     $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$password' ";
 
@@ -20,15 +18,11 @@ if(isset($_POST['submit'])){
 
         $row = mysqli_fetch_array($result);
 
-        if($row['user_type'] == 'user'){
+      if ($row['email'] == $_POST['email']){
 
-            $_SESSION['user_name'] = $row['name'];
-            header('location:user_page.php');
-   
-         }elseif($row['user_type'] == 'user'){
-   
-            $_SESSION['user_name'] = $row['name'];
-            header('location:user_page.php');
+        $_SESSION['username'] = $row['name'];  
+        header('location:user_page.php');
+
       } 
     } else {
         $error[] = 'incorrect email or password!';
@@ -44,7 +38,7 @@ if(isset($_POST['submit'])){
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post" id="sign-up-form">
+    <form action="sign_in.php" method="post" id="sign-up-form">
         <h1 class="for-white-color" id="headline">We Hear You Loud and Clear<br>Your Voice, Our Priority</h1>
        <div id="cred-img-area">
             <div id="cred-area">
@@ -56,10 +50,9 @@ if(isset($_POST['submit'])){
                     };
                 };
                 ?>
-                <input class="sign-up-inputs" id="sign-in-name" type="text" name="username" placeholder="Name" required>
                 <input class="sign-up-inputs" id="sign-in-email" type="email" name="email" placeholder="Email" required>
                 <input class="sign-up-inputs" id="sign-in-password" type="password" name="password" placeholder="Password" required>
-                <button class="form-buttons" type="submit" id="sign-in-button">Sign In</button>
+                <button class="form-buttons" type="submit" name="submit" id="sign-in-button">Sign In</button>
                 <p class="for-white-color" id="ptext">Dont have an account? <a href="sign_up.php" class="for-white-color">Sign Up</a></p>
             </div>
             <div id="cred-img">

@@ -10,7 +10,6 @@ if(isset($_POST['submit'])){
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
-    $user_type = $_POST['cpassword'];
     
     $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$password' ";
 
@@ -25,7 +24,7 @@ if(isset($_POST['submit'])){
         if($password != $cpassword){
             $error[] = 'password do not matched!';
         } else {
-            $insert = "INSERT INTO user_form(name, email, password, user_type) VALUES('$usename', '$email', '$password', '$user_type')";
+            $insert = "INSERT INTO user_form(name, email, password) VALUES('$usename', '$email', '$password')";
             mysqli_query($conn, $insert);
             header('location:sign_in.php');
         }
@@ -42,7 +41,7 @@ if(isset($_POST['submit'])){
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post" id="sign-up-form">
+    <form action="sign_up.php" method="post" id="sign-up-form">
         <h1 class="for-white-color" id="headline">We Hear You Loud and Clear<br>Your Voice, Our Priority</h1>
        <div id="cred-img-area">
             <div id="cred-area">

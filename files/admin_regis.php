@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
         } else {
             $insert = "INSERT INTO user_admin(name, email, password, admin_type) VALUES('$ausename', '$aemail', '$apassword', '$auser_type')";
             mysqli_query($conn, $insert);
-            header('location:admin_page.php');
+            header('location:admin_sign.php');
         }
     }
 };

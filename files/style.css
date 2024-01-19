@@ -2,7 +2,7 @@ html{
     margin: 0px;
     padding: 0px;
     font-family: 'poppins';
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 body{
     background-color: #141d2e;
