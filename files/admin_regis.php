@@ -10,7 +10,6 @@ if(isset($_POST['submit'])){
     $aemail = mysqli_real_escape_string($conn, $_POST['email']);
     $apassword = md5($_POST['password']);
     $acpassword = md5($_POST['cpassword']);
-    $auser_type = $_POST['cpassword'];
     
     $select = " SELECT * FROM user_admin WHERE email = '$aemail' && password = '$apassword' ";
 
@@ -25,7 +24,7 @@ if(isset($_POST['submit'])){
         if($apassword != $acpassword){
             $error[] = 'password do not matched!';
         } else {
-            $insert = "INSERT INTO user_admin(name, email, password, admin_type) VALUES('$ausename', '$aemail', '$apassword', '$auser_type')";
+            $insert = "INSERT INTO user_admin(name, email, password) VALUES('$ausename', '$aemail', '$apassword')";
             mysqli_query($conn, $insert);
             header('location:admin_sign.php');
         }

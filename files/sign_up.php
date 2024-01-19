@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
                 <p class="for-white-color" id="ptext">Already have an account? <a href="sign_in.php" class="for-white-color">Sign In</a></p>
             </div>
             <div id="cred-img">
-               <a href="admin_sign.php"><div class="admn"><p id="admin">admin</p></div></a>
+               <a href="admin_regis.php"><div class="admn"><p id="admin">admin</p></div></a>
                 <img id="img-poster" src="../img/poster.jpg" alt="poster">
             </div>
        </div>
