@@ -15,7 +15,7 @@ if(!isset($_SESSION['user_name'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="user_page.css">
-    <title>User Page</title>
+    <title>Home</title>
 </head>
 <body>
     <h2 class="title">wecome "<?php echo $_SESSION['user_name'] ?>"</h2>
@@ -27,7 +27,7 @@ if(!isset($_SESSION['user_name'])){
         </div>
         <div class="info-div">
             <div class="info">
-                
+
             </div>
         </div>
 
