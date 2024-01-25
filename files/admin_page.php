@@ -18,9 +18,15 @@ if(!isset($_SESSION['admin_name'])){
     <title>Admin Page</title>
 </head>
 <body>
+<h2 class="title">wecome "<?php echo $_SESSION['admin_name'] ?>"</h2>
     <div class="container">
-        <h1>welcome <span><?php echo $_SESSION['admin_name'] ?></span></h1>
-        <p><a href="admin_sign.php">log out</a></p>
+        <div class="report-div">
+            <div class="report">
+
+            </div>
+        </div>
+
+        <p class="log-out-button"><a class="log-out" href="log_out.php">log out</a></p>
     </div>
 </body>
 </html>

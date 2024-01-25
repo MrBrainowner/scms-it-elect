@@ -27,6 +27,7 @@ if(isset($_POST['submit'])){
             $insert = "INSERT INTO user_admin(name, email, password) VALUES('$ausename', '$aemail', '$apassword')";
             mysqli_query($conn, $insert);
             header('location:admin_sign.php');
+  
         }
     }
 };
@@ -61,7 +62,6 @@ if(isset($_POST['submit'])){
                 <input type="submit" name="submit" value="Sign Up" class="form-buttons" id="sign-up-button" >
                 <!-- <input class="form-buttons" type="submit" id="sign-up-button"> -->
                 <p class="for-white-color" id="ptext">Already have an account? <a href="admin_sign.php" class="for-white-color">Sign In</a></p>
-                <div id="u-link-div"><a id="u-link" href="sign_up.php">user</a></div>
             </div>
        </div>
     </form>

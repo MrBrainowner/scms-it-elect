@@ -54,7 +54,6 @@ if(isset($_POST['submit'])){
                 <input class="sign-up-inputs" id="sign-up-name" type="email" name="email" placeholder="Email" required>
                 <input class="sign-up-inputs" id="sign-up-password" type="password" name="password" placeholder="Password" required>
                 <button class="form-buttons" type="submit" name="submit" id="sign-up-button">Sign In</button>
-                <p class="for-white-color" id="ptext">Register as <a href="admin_regis.php" class="for-white-color">Admin</a></p>
                 <div id="u-link-div"><a id="u-link" href="sign_in.php">user</a></div>
             </div>
        </div>
