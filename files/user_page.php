@@ -18,7 +18,7 @@ if(!isset($_SESSION['user_name'])){
     <title>Home</title>
 </head>
 <body>
-    <h2 class="title">wecome "<?php echo $_SESSION['user_name'] ?>"</h2>
+    <h2 class="title">welcome "<?php echo $_SESSION['user_name'] ?>"</h2>
     <div class="container">
         <div class="report-div">
             <div class="report">
