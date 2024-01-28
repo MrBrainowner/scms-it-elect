@@ -1,6 +1,6 @@
 <?php
 
-@include '../../CRUD/read.php';
+@include '../CRUD/read.php';
 @include '../config.php';
 
 session_start();
