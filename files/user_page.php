@@ -20,18 +20,17 @@ if(!isset($_SESSION['user_name'])){
 <body>
     <h2 class="title">welcome "<?php echo $_SESSION['user_name'] ?>"</h2>
     <div class="container">
-        <div class="report-div">
-            <div class="report">
-
-            </div>
+        <div class="sideboard">
+            <div class="side-b profile"><p class="side-buttons">My Profile</p></div>
+            <div class="side-b separators"></div>
+            <div class="side-b reports"><p class="side-buttons">Report</p></div>
+            <div class="side-b history"><p class="side-buttons">History</p></div>
+            <div class="side-b separators"></div>
+            <p class="log-out-button"><a class="log-out" href="log_out.php">log out</a></p>
         </div>
-        <div class="info-div">
-            <div class="info">
+        <div class="contents">
 
-            </div>
         </div>
-
-        <p class="log-out-button"><a class="log-out" href="log_out.php">log out</a></p>
     </div>
 </body>
 </html>

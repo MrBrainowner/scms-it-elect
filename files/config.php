@@ -1,5 +1,5 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'scmsdb');
+$conn = mysqli_connect("localhost", "root", "", "scmsdb");
 
 ?>

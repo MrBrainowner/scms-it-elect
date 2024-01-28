@@ -14,14 +14,13 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
 }
 .container{
-    background-color: #2b314c;
+    background-color: #141c2f;
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 10px;
+    gap: 15px;
 }
 .title{
     padding: 10px;
@@ -30,46 +29,73 @@ body{
 }
 .log-out{
     text-decoration: none;
-    color: #141d2e;
+    color: #eeaa74;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .log-out-button{
     position: absolute;
-    background-color: #eeaa7490;
-    bottom: 5px;
-    right: 30px;
+    bottom: 10px;
     padding: 2px 5px;
 }
-.log-out-button:hover{
-    outline: 1px solid white;
-    background-color: #eeaa74;
+.log-out:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+.sideboard{
+    background-color: #2b314c;
+    height: 100%;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.side-b{
+    padding: 5px;
+    margin: 5px 0;
+}
+.side-buttons{
+    color: #eeaa74;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+.side-buttons:hover{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.separators{
+    border-bottom: 1px solid #eeaa74;
+    opacity: 30%;
 }
 
-/* table */
-.table-div{
+/* contents */
+.contents{
+    background-color: #2b314c;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.table{
-    width: 100%;
-    table-layout: fixed ;
-}
-.table thead tr th{
+.c-box{
+    width: 13rem;
+    height: 13rem;
     background-color: #eeaa74;
-    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.table tbody tr td{
-    background-color: #3d4362;
-    padding: 10px;
-    color: #fff;
-}
-.id{
-    width: 4%;
-}
-.name, .email{
-    width: 20%;
-}
-#select{
-    width: 100%;
-    outline: none;
+.box-text{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #141c2f;
 }
