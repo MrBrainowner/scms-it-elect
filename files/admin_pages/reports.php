@@ -29,7 +29,7 @@ if(!isset($_SESSION['admin_name'])){
             <div class="side-b reports"><a class="side-buttons" href="">Reports</a></div>
             <div class="side-b users"><a class="side-buttons" href="users.php">Users</a></div>
             <div class="side-b separators"></div>
-            <p class="log-out-button"><a class="log-out" href="log_out.php">log out</a></p>
+            <p class="log-out-button"><a class="log-out" href="../log_out.php">log out</a></p>
         </div>
         <div class="contents">
             

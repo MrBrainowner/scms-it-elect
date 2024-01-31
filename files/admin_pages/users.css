@@ -1,11 +1,14 @@
-.table{
+.table-container{
     width: 100%;
-    height: auto;
+}
+.table{
     table-layout: fixed;
+    width: 100%;
 }
 table thead tr th{
     background-color: #efaa75;
 }
 table tbody tr td{
-
+    color: #fff;
+    background-color: #efaa7520;
 }

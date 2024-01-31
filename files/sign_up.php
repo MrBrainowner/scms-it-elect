@@ -37,11 +37,12 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Sign Up</title>
 </head>
 <body>
-    <form action="sign_up.php" method="post" id="sign-up-form">
+    <form action="#p" method="post" id="sign-up-form">
         <h1 class="for-white-color" id="headline">We Hear You Loud and Clear<br>Your Voice, Our Priority</h1>
        <div id="cred-img-area">
             <div id="cred-area">
@@ -58,6 +59,7 @@ if(isset($_POST['submit'])){
                 <input class="sign-up-inputs" id="sign-up-password" type="password" name="password" placeholder="Password" required>
                 <input class="sign-up-inputs" id="confirm-password" type="password" name="cpassword" placeholder="Confirm password" required>
                 <input type="submit" name="submit" value="Sign Up" class="form-buttons" id="sign-up-button" >
+                <input type="button" value="Sign Up with Google" class="form-buttons" id="google-button" >
                 <!-- <input class="form-buttons" type="submit" id="sign-up-button"> -->
                 <p class="for-white-color" id="ptext">Already have an account? <a href="sign_in.php" class="for-white-color">Sign In</a></p>
             </div>
@@ -69,3 +71,4 @@ if(isset($_POST['submit'])){
     </form>
 </body>
 </html>
+

@@ -30,33 +30,37 @@ if(!isset($_SESSION['admin_name'])){
             <div class="side-b reports"><a class="side-buttons" href="reports.php">Reports</a></div>
             <div class="side-b users"><a class="side-buttons" href="">Users</a></div>
             <div class="side-b separators"></div>
-            <p class="log-out-button"><a class="log-out" href="log_out.php">log out</a></p>
+            <p class="log-out-button"><a class="log-out" href="../log_out.php">log out</a></p>
         </div>
         <div class="contents">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th class="id">ID</th>
-                        <th class="name">Name</th>
-                        <th class="email">Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <?php
-                        while($rows=mysqli_fetch_assoc($results)){
-                            ?>
-                                <tr>
-                                    <td><?php echo $rows['id']; ?></td>
-                                    <td><?php echo $rows['name']; ?></td>
-                                    <td><?php echo $rows['email']; ?></td>
-                                </tr>
-                            <?php
-                        }
-                    ?>
+            <div class="table-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="id">ID</th>
+                            <th class="name">Name</th>
+                            <th class="email">Email</th>
+                            <th class="">Something</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <?php
+                            while($rows=mysqli_fetch_assoc($results)){
+                                ?>
+                                    <tr>
+                                        <td><?php echo $rows['id']; ?></td>
+                                        <td><?php echo $rows['name']; ?></td>
+                                        <td><?php echo $rows['email']; ?></td>
+                                        <td></td>
+                                    </tr>
+                                <?php
+                            }
+                        ?>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+                </div>
         </div>
 </body>
 </html>
