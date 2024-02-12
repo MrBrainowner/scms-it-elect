@@ -8,13 +8,14 @@ if (isset($_POST['submit'])) {
 
     $usename = mysqli_real_escape_string($conn, $_POST['username']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = md5($_POST['password']);
-    $cpassword = md5($_POST['cpassword']);
+    $password = trim($_POST['password']);
+    $cpassword = trim($_POST['cpassword']);
+    
 
     $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$password' ";
 
     $result = mysqli_query($conn, $select);
-
+    
     if (mysqli_num_rows($result) > 0) {
 
         $error[] = 'user already exist!';
@@ -22,13 +23,15 @@ if (isset($_POST['submit'])) {
 
         if ($password != $cpassword) {
             $error[] = 'password do not matched!';
-        } else {
+        }
+        else {
             $insert = "INSERT INTO user_form(name, email, password) VALUES('$usename', '$email', '$password')";
             mysqli_query($conn, $insert);
-            header('location:sign_in.php');
         }
+        
     }
 };
+
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +63,7 @@ if (isset($_POST['submit'])) {
                 <input class="sign-up-inputs" id="password" type="password" name="password" placeholder="Password" required>
                 <input class="sign-up-inputs" id="confirm-password" type="password" name="cpassword" placeholder="Confirm password" required>
                 <input type="submit" name="submit" value="Sign Up" class="form-buttons" id="button">
+                <button id="google-sign" class="form-buttons">Log In with Google</button>
                 <!-- <input class="form-buttons" type="submit" id="sign-up-button"> -->
                 <p class="for-white-color" id="ptext">Already have an account? <a href="sign_in.php" class="for-white-color">Sign In</a></p>
             </div>
