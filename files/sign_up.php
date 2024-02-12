@@ -56,10 +56,10 @@ if (isset($_POST['submit'])) {
                 };
                 ?>
                 <input class="sign-up-inputs" id="sign-up-name" type="text" name="username" placeholder="Name" required>
-                <input class="sign-up-inputs" id="sign-up-email" type="email" name="email" placeholder="Email" required>
-                <input class="sign-up-inputs" id="sign-up-password" type="password" name="password" placeholder="Password" required>
+                <input class="sign-up-inputs" id="email" type="email" name="email" placeholder="Email" required>
+                <input class="sign-up-inputs" id="password" type="password" name="password" placeholder="Password" required>
                 <input class="sign-up-inputs" id="confirm-password" type="password" name="cpassword" placeholder="Confirm password" required>
-                <input type="submit" name="submit" value="Sign Up" class="form-buttons" id="sign-up-button">
+                <input type="submit" name="submit" value="Sign Up" class="form-buttons" id="button">
                 <!-- <input class="form-buttons" type="submit" id="sign-up-button"> -->
                 <p class="for-white-color" id="ptext">Already have an account? <a href="sign_in.php" class="for-white-color">Sign In</a></p>
             </div>

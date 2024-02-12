@@ -20,7 +20,6 @@ if (isset($_POST['submit'])) {
         $row = mysqli_fetch_array($result);
 
         if ($row['password'] == $password) {
-
             $_SESSION['user_name'] = $row['name'];
             header('location:user_page.php');
         }
@@ -55,9 +54,9 @@ if (isset($_POST['submit'])) {
                     };
                 };
                 ?>
-                <input class="sign-up-inputs" id="sign-in-email" type="email" name="email" placeholder="Email" required>
-                <input class="sign-up-inputs" id="sign-in-password" type="password" name="password" placeholder="Password" required>
-                <button class="form-buttons" type="submit" name="submit" id="sign-in-button">Sign In</button>
+                <input class="sign-up-inputs" id="email" type="email" name="email" placeholder="Email" required>
+                <input class="sign-up-inputs" id="password" type="password" name="password" placeholder="Password" required>
+                <button class="form-buttons" type="submit" name="submit" id="button">Sign In</button>
                 <button id="google-sign" class="form-buttons">Log In with Google</button>
                 <p class="for-white-color" id="ptext">Dont have an account? <a href="sign_up.php" class="for-white-color">Sign Up</a></p>
             </div>
@@ -71,17 +70,5 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </form>
-    <?php function phpfunc()
-    {
-        $_SESSION['user_name'] = 'User';
-    };
-    ?>
-    <script type="text/javascript">
-        var button = document.getElementById("google-sign");
-        var phpcall = phpfunc();
-
-        button.addEventListener('click', phpcall);
-    </script>
 </body>
-
 </html>

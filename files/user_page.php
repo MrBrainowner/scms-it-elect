@@ -1,13 +1,11 @@
 <?php
 
 @include 'config.php';
-
 session_start();
 
 if (!isset($_SESSION['user_name'])) {
     header('location:sign_in.php');
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +14,7 @@ if (!isset($_SESSION['user_name'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="main.js" defer></script>
+    <script type="module" src="update.js" defer></script>   
     <link rel="stylesheet" href="user_page.css">
     <title>Home</title>
 </head>
@@ -38,9 +37,12 @@ if (!isset($_SESSION['user_name'])) {
             <p class="log-out-button" id="log-out"><a class="log-out" href="log_out.php">log out</a></p>
         </div>
         <div class="contents">
-
+            <img src="" alt="Profile Picture" id="userProfilePicture">
+            <p class="strong">Name: <span id="userName"></span></p>
+            <p>Email: <span id="userEmail"></span></p>
         </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

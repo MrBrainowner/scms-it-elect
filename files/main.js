@@ -1,7 +1,6 @@
 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
-  import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyDrJQHpgtPzw13K1w-vL8bN2MvR3NkpVW8",
@@ -16,13 +15,10 @@
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  auth.languageCode = 'en'
   const provider = new GoogleAuthProvider();
-  const user = auth.currentUser;
+  auth.useDeviceLanguage()
 
   const signIn = document.getElementById("google-sign");
-  const signOut = document.getElementById("log-out");
-
 
 
   signIn.addEventListener('click', function(){
@@ -37,4 +33,24 @@
     });
   })
 
+  //grab
+const register = document.getElementById("button");
+register.addEventListener("click", function (event) {
+  event.preventDefault()
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+
+      const user = userCredential.user;
+      window.location.href = "user_page.php";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+})
 
